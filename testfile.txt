@@ -1,1 +1,851 @@
-This is my first project
+.accountChattingPersonName, .topFixed-set .accountHolder-set .accountHolder-details .accountHolder-name, header .chattingPersonNameStatus .chattingPersonName, .user-info .userInfo-Name {
+  font-size: 13px;
+  color: #003056; }
+
+.messageCount, .topFixed-set .accountHolder-set .accountHolder-details .accountHolder-name::after, .userGroup .userStatusMessageCount-set .userMessageCount, .userInfo-Photo::after {
+  background-color: #e2575c;
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  padding: 0px 6px;
+  border-radius: 5px;
+  height: 13px;
+  line-height: normal; }
+
+.center-align, .close-btn .close-line, .addConference-Set .addConference .ver-line, footer .messageType .addAttachment .attachmentLine {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+@font-face {
+  src: url(../fonts/Lato-Regular.ttf);
+  font-family: "Lato Regular"; }
+@font-face {
+  src: url(../fonts/Lato-Semibold.ttf);
+  font-family: "Lato Semibold"; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato Regular;
+  font-size: 13px;
+  line-height: 18px;
+  color: #6d6e71;
+  background-color: #fff;
+  overflow: hidden; }
+
+/*----- Common CSS starts here -----*/
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0; }
+
+input, textarea, select, button {
+  font-size: 12px;
+  font-family: Lato Regular;
+  color: #6d6e71; }
+
+.status {
+  width: 6px;
+  height: 6px;
+  background-color: gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.active-status {
+  background-color: #00a651 !important; }
+
+.close-btn {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer; }
+  .close-btn .close-line {
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    background-color: #bcbec0;
+    -webkit-transform: rotate(-47deg);
+    -moz-transform: rotate(-47deg);
+    -ms-transform: rotate(-47deg);
+    -o-transform: rotate(-47deg);
+    transform: rotate(-47deg); }
+  .close-btn .close-line2 {
+    -webkit-transform: rotate(47deg);
+    -moz-transform: rotate(47deg);
+    -ms-transform: rotate(47deg);
+    -o-transform: rotate(47deg);
+    transform: rotate(47deg); }
+
+/*----- Common CSS ends here -----*/
+/*----- Base frame starts here -----*/
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #ccc; }
+
+.mainGroup {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative; }
+
+.user-set {
+  width: 338px;
+  height: 100%;
+  background-color: #f5f5f6;
+  position: absolute;
+  padding-left: 15px; }
+  .user-set .usersList {
+    overflow-y: auto;
+    height: 70%;
+    clear: both; }
+
+.client-group {
+  display: grid;
+  height: 100vh;
+  padding-left: 338px;
+  width: 100%; }
+  .client-group .chat-set {
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
+    display: table-cell;
+    padding: 15px;
+    position: relative;
+    vertical-align: top; }
+
+/*----- Base frame ends here -----*/
+/*----- Account holder set starts here ----->*/
+.topFixed-set {
+  width: 308px;
+  background-color: #f5f5f6;
+  padding-top: 15px;
+  z-index: 1; }
+  .topFixed-set .accountHolder-set .accountHolder-photo {
+    width: 77px;
+    height: 93px;
+    border: solid 3px #cacaca;
+    display: inline-block;
+    vertical-align: bottom;
+    background: url(../images/accountHolderPhoto.jpg) no-repeat center #e3e6ea; }
+  .topFixed-set .accountHolder-set .accountHolder-details {
+    width: 217px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 10px; }
+    .topFixed-set .accountHolder-set .accountHolder-details .accountHolder-name::after {
+      content: "23";
+      margin-left: 2px;
+      margin-top: -4px; }
+    .topFixed-set .accountHolder-set .accountHolder-details .accountHolder-caption {
+      width: 167px;
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: normal;
+      margin-bottom: 4px; }
+  .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet {
+    font-size: 10px;
+    border-bottom: solid 1px #e3e3e3;
+    overflow: hidden;
+    padding: 3px 0;
+    margin-bottom: 3px; }
+    .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-phoneNo {
+      float: left;
+      border-right: solid 1px #e3e3e3;
+      padding-right: 5px;
+      margin-right: 2px;
+      line-height: 15px; }
+    .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-Status {
+      font-size: 10px;
+      color: #6d6e71;
+      float: left;
+      width: 15px;
+      height: 15px;
+      background: url("../images/user-available.png") no-repeat center #a9c6c6;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px; }
+      .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-Status ul {
+        margin: 0;
+        padding: 0;
+        border: solid 1px #e3e3e3;
+        position: absolute;
+        top: 89px;
+        display: none; }
+        .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-Status ul li {
+          list-style: none;
+          background-color: #f5f5f6;
+          padding: 1px 7px;
+          border-bottom: solid 1px #e3e3e3; }
+          .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-Status ul li:hover {
+            background-color: #dde4ea; }
+    .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet :hover ul {
+      display: block; }
+    .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-voiceFaxset {
+      float: left;
+      padding-left: 3px; }
+      .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-voiceFaxset .faxes {
+        width: 15px;
+        height: 15px;
+        background: url("../images/fax-voicemail.png") no-repeat 3px center #bcbec0;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        float: left;
+        margin-right: 4px; }
+      .topFixed-set .accountHolder-set .accountHolder-phoneStatusSet .accountHolder-voiceFaxset .voicemail {
+        background-position-x: -16px; }
+  .topFixed-set .accountHolder-set .accountHolder-address {
+    font-size: 10px;
+    line-height: normal; }
+  .topFixed-set input[type=search] {
+    width: 100%;
+    background-color: #dde4ea;
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    margin: 8px 0;
+    font-size: 12px;
+    font-family: "Lato Regular";
+    color: #6d6e71; }
+  .topFixed-set .icon-set {
+    text-align: center; }
+    .topFixed-set .icon-set .home-icon {
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      margin: 0 17px;
+      background-color: #bcbec0;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      -ms-border-radius: 18px;
+      border-radius: 18px;
+      position: relative; }
+      .topFixed-set .icon-set .home-icon img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+
+/*----- Account holder set ends here ----->*/
+/*.connections-set{
+.connections-strip{background:url("../images/user-icon.png") no-repeat 8px 3px; padding: 5px 6px 8px 32px; color:$heading-color;overflow: hidden; border-bottom: solid 1px $border-color;margin-top: 8px;
+.connection-heading {float:left; }
+.connection-downArrow {width:10px; height:10px; background:url("../images/updown-arrow.png") no-repeat 0 -13px; float:right; margin-top: 4px;}
+}
+}*/
+/*----- Head section starts here ----->*/
+header {
+  border-bottom: solid 1px #e3e3e3;
+  padding-bottom: 10px;
+  overflow: hidden;
+  position: relative; }
+  header .ChattingPersonSet {
+    position: absolute;
+    bottom: 10px; }
+  header .chattingPersonNameStatus {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px; }
+  header .chatIconSet {
+    float: right; }
+    header .chatIconSet .chatIconCall {
+      width: 45px;
+      height: 45px;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-border-radius: 23px;
+      -moz-border-radius: 23px;
+      -ms-border-radius: 23px;
+      border-radius: 23px;
+      background-color: #bcbec0;
+      position: relative; }
+      header .chatIconSet .chatIconCall img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    header .chatIconSet .chatIconActive {
+      width: 57px;
+      height: 57px;
+      background-color: #003056;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      border-radius: 30px; }
+
+.userphoto-icon {
+  width: 45px;
+  height: 45px;
+  border: solid 3px #9edada;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  border-radius: 23px;
+  background: url(../images/userPhoto2.jpg) no-repeat center #e3e6ea; }
+
+/*----- Head section ends here ----->*/
+/*----- Conference section starts here ----->*/
+.addConference-Set {
+  margin: 10px auto 7px auto;
+  text-align: center; }
+  .addConference-Set .addConference {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-color: #fff;
+    border: solid 1px #e3e3e3;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    position: relative; }
+    .addConference-Set .addConference .ver-line {
+      width: 1px;
+      height: 28px;
+      position: absolute;
+      background-color: #e3e3e3; }
+    .addConference-Set .addConference .horz-line {
+      width: 28px;
+      height: 1px; }
+  .addConference-Set .adduser-set {
+    width: 63px;
+    display: inline-block;
+    text-align: left;
+    position: relative; }
+    .addConference-Set .adduser-set .adduserMiddleline {
+      width: 22px;
+      height: 1px;
+      position: absolute;
+      background-color: #e3e3e3;
+      left: 45px;
+      top: 0;
+      bottom: 3px;
+      margin: auto; }
+    .addConference-Set .adduser-set .adduserMiddleline2 {
+      width: 1px;
+      height: 14px;
+      position: absolute;
+      background-color: #e3e3e3;
+      left: 55px;
+      top: 0;
+      bottom: 2px;
+      margin: auto; }
+    .addConference-Set .adduser-set .addusers {
+      width: 45px;
+      height: 45px;
+      background: url(../images/userPhoto.jpg) no-repeat center #e3e6ea;
+      border: solid 2px #bcbec0;
+      display: inline-block;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      border-radius: 25px; }
+    .addConference-Set .adduser-set .userPoint {
+      width: 5px;
+      height: 5px;
+      background-color: #e3e3e3;
+      position: absolute;
+      left: 53px;
+      bottom: 0;
+      top: -3px;
+      margin: auto;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px; }
+
+.adduser-set:nth-child(even) .addusers {
+  background: url("../images/userPhoto2.jpg") no-repeat center #e3e6ea; }
+
+/*----- Conference section ends here ----->*/
+/*----- Accordion Panel section starts here ----->*/
+button.accordion {
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  background: url("../images/user-icon.png") no-repeat 8px 9px;
+  padding: 11px 6px 14px 32px;
+  color: #003056;
+  overflow: hidden;
+  border-bottom: solid 1px #e3e3e3;
+  font-size: 13px; }
+
+button.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px; }
+
+button.accordion.active:after {
+  content: "\2212"; }
+
+div.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+
+.channels-Icon {
+  background: url("../images/channel-icon.png") no-repeat 3px 9px !important;
+  padding: 11px 6px 14px 32px !important; }
+
+.groupList button.accordion {
+  background-color: #dde4ea;
+  border-bottom-color: #f5f5f6;
+  padding: 7px 6px 8px 32px;
+  background-position-y: 7px; }
+
+/*----- Single user starts here ----->*/
+.userGroup {
+  width: 100%;
+  border-bottom: solid 1px #e3e3e3;
+  display: table; }
+  .userGroup .dateTimeSet {
+    width: 52px;
+    font-size: 9px;
+    position: relative;
+    display: table-cell;
+    border-right: solid 1px #e3e3e3;
+    vertical-align: middle;
+    line-height: normal; }
+    .userGroup .dateTimeSet .time-info {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      padding-right: 8px; }
+      .userGroup .dateTimeSet .time-info::before {
+        content: "";
+        position: absolute;
+        background: url("../images/clockicon.svg") no-repeat;
+        width: 11px;
+        height: 11px;
+        left: -13px; }
+    .userGroup .dateTimeSet .date-info {
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+      padding-right: 8px; }
+  .userGroup .userIconPhoneCap-set {
+    display: table-cell;
+    width: 227px;
+    vertical-align: middle;
+    padding: 4px 0; }
+    .userGroup .userIconPhoneCap-set .userPhoto {
+      width: 42px;
+      height: 42px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px;
+      border: solid 2px #e3e3e3;
+      display: inline-block;
+      background: url(../images/userPhoto2.jpg) no-repeat center #e3e6ea;
+      vertical-align: middle;
+      margin: 0 8px;
+      box-shadow: 0px 0px 7px green; }
+    .userGroup .userIconPhoneCap-set .userNameCaption-Set {
+      display: inline-block;
+      vertical-align: middle; }
+      .userGroup .userIconPhoneCap-set .userNameCaption-Set .userName {
+        color: #003056;
+        font-size: 14px; }
+      .userGroup .userIconPhoneCap-set .userNameCaption-Set .userCaption {
+        width: 159px;
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  .userGroup .userStatusMessageCount-set {
+    width: 33px;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    height: 100%; }
+    .userGroup .userStatusMessageCount-set .userGroupStatus {
+      position: absolute;
+      right: 0;
+      top: 4px;
+      margin: 0; }
+    .userGroup .userStatusMessageCount-set .userMessageCount {
+      position: absolute;
+      right: 0;
+      bottom: 4px; }
+
+/*----- Single user starts here ----->*/
+/*----- Accordion Panel section ends here ----->*/
+/*-----Conversation-set starts here-----*/
+.conversation-size {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top; }
+
+.videoCall-set {
+  margin: 0 auto;
+  height: 200px;
+  background-color: green; }
+
+.video-size {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top; }
+
+.conversation-set {
+  width: 85%;
+  height: 67vh;
+  margin: 0 auto 20px auto;
+  overflow-y: auto;
+  display: table-cell;
+  vertical-align: bottom;
+  /*&::after{content: ""; position: absolute; width: 100%; border: solid 1px; height: 21px; box-sizing: border-box; bottom: 0;}*/ }
+
+.chatPosition {
+  padding-top: 20px;
+  /*width: 100%; top: 0; position: absolute; bottom: 0; z-index: 1;*/ }
+  .chatPosition::before {
+    content: "17 January 2017";
+    border-bottom: solid 1px #e3e3e3;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px; }
+
+.conversationLeft-set {
+  width: 73%;
+  margin-top: 15px;
+  position: relative;
+  float: left;
+  /*display: inline-block; transform: translate(0%,210px);*/ }
+  .conversationLeft-set .userphoto-icon {
+    position: absolute; }
+
+.message-set {
+  margin-left: 54px; }
+  .message-set p {
+    background-color: #e4f6f6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-bottom: 6px;
+    position: relative;
+    float: left;
+    clear: both; }
+    .message-set p::before {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: -18px;
+      margin-left: 0;
+      border-width: 9px;
+      border-style: solid;
+      border-color: transparent #e4f6f6 transparent transparent; }
+
+.chat-time {
+  position: absolute;
+  right: -42px;
+  bottom: 0;
+  padding: 2px 10px 2px 6px;
+  z-index: 1;
+  font-size: 10px;
+  color: #bcbec0; }
+
+.conversationRight-set {
+  float: right; }
+  .conversationRight-set .userphoto-icon {
+    right: 0;
+    border-color: #b4cd7d;
+    background: url(../images/userPhoto.jpg) no-repeat center #e3e6ea; }
+  .conversationRight-set .message-set {
+    margin-right: 54px; }
+    .conversationRight-set .message-set p {
+      background-color: #eaf7ce;
+      float: right;
+      padding: 10px 16px;
+      text-align: right; }
+      .conversationRight-set .message-set p::before {
+        right: -18px;
+        left: inherit;
+        border-color: transparent transparent transparent #eaf7ce; }
+      .conversationRight-set .message-set p .chat-time {
+        left: -42px;
+        right: inherit;
+        padding: 2px 6px 2px 10px; }
+
+/*-----Conversation-set ends here-----*/
+/*----- Message typing section starts here ----->*/
+footer {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  height: 60px;
+  background-color: #fff;
+  padding-top: 10px; }
+  footer .messageType {
+    width: 70%;
+    border: solid 1px #e3e3e3;
+    margin: auto;
+    outline: none;
+    color: #6d6e71;
+    background-color: #f5f5f6;
+    position: relative; }
+    footer .messageType input[type=text] {
+      width: 87%;
+      outline: none;
+      background: none;
+      padding: 8px;
+      border: none; }
+    footer .messageType button {
+      padding: 8px;
+      background-color: #003056;
+      border: none;
+      outline: none;
+      color: #fff;
+      position: absolute;
+      right: 0; }
+    footer .messageType .addAttachment {
+      width: 19px;
+      height: 19px;
+      position: relative;
+      float: left;
+      margin: 6px 0 0 5px; }
+      footer .messageType .addAttachment .attachmentLine {
+        width: 1px;
+        height: 19px;
+        position: absolute;
+        background-color: #bcbec0; }
+      footer .messageType .addAttachment .attachmentLine2 {
+        width: 19px;
+        height: 1px; }
+
+/*----- Message typing section ends here ----->*/
+/*----- User information section starts here ----->*/
+.user-info {
+  width: 184px;
+  height: 100%;
+  background-color: #f5f5f6;
+  float: right;
+  text-align: center;
+  display: table;
+  padding: 0 15px;
+  font-size: 10px;
+  position: relative;
+  display: none; }
+
+.userInfo-Group {
+  display: table-cell;
+  vertical-align: middle; }
+
+.userInfo-Photo {
+  width: 105px;
+  height: 105px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  border: solid 5px #fff;
+  display: inline-block;
+  background: url(../images/userInfoPhoto.jpg) no-repeat center 0 #e3e6ea;
+  margin-bottom: 5px; }
+  .userInfo-Photo::after {
+    height: 15px;
+    padding: 2px 6px 0px 6px;
+    content: "22";
+    margin-left: 40px;
+    margin-top: -7px; }
+
+.userInfo-FriendsCount, .userInfo-GroupCount {
+  max-height: 200px;
+  background-color: #e3e6ea;
+  padding: 2px 10px;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  border-radius: 4px;
+  background-color: #e3e6ea; }
+
+.userAboutMe {
+  margin: 15px 0 25px 0; }
+
+.userInfo-address {
+  margin-bottom: 10px; }
+
+.userInfo-phoneNo-group, .email-group, .website-group {
+  margin-bottom: 10px; }
+
+/*----- User information section ends here ----->*/
+/*----- Login Page design -----*/
+.heroChat-Logo {
+  margin: 30px auto 0 auto;
+  text-align: center; }
+
+.signIn-set {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  margin: 0 auto;
+  text-align: center; }
+  .signIn-set .signin {
+    font-size: 16px;
+    margin-bottom: 20px; }
+  .signIn-set .grayline {
+    width: 130px;
+    height: 130px;
+    background-color: #f5f5f6;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    -ms-border-radius: 75px;
+    border-radius: 75px;
+    border: solid 1px #e3e3e3;
+    padding: 8px;
+    margin: 0 auto;
+    position: relative; }
+    .signIn-set .grayline .signIn-photo {
+      width: 106px;
+      height: 106px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      border-radius: 50px;
+      border: solid 5px #c3c3c3;
+      background-color: #e3e6ea;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+      .signIn-set .grayline .signIn-photo img {
+        width: 100%; }
+    .signIn-set .grayline::after {
+      position: absolute;
+      content: "";
+      width: 400px;
+      height: 1px;
+      background-color: #e3e3e3;
+      top: 50%;
+      left: 50%;
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: -1; }
+  .signIn-set form {
+    margin-top: 30px; }
+    .signIn-set form input[type=text], .signIn-set form input[type=password], .signIn-set form input[type=submit] {
+      background-color: #f5f5f6;
+      border: none;
+      width: 232px;
+      padding: 10px;
+      outline: none;
+      margin: 4px; }
+    .signIn-set form input[type=submit] {
+      background-color: #deefff; }
+      .signIn-set form input[type=submit]:hover {
+        background-color: #bcbec0;
+        color: #fff;
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out; }
+  .signIn-set .incorrectUsername {
+    margin-top: 20px; }
+
+/*----- Media Queries starts here ----->*/
+@media screen and (max-width: 1024px) {
+  .conversation-set {
+    width: 100%; }
+
+  .conversationLeft-set {
+    width: 75%; }
+
+  footer .messageType input[type=text] {
+    width: 85%; } }
+@media screen and (max-width: 1023px) {
+  .user-info {
+    position: absolute;
+    right: -185px; } }
+@media screen and (max-width: 800px) {
+  footer .messageType {
+    width: 100%; } }
+@media screen and (max-width: 768px) {
+  .user-set {
+    left: -338px; }
+
+  .client-group {
+    padding-left: 0;
+    z-index: 1000; } }
+/*----- Media ends starts here ----->*/
+
+/*# sourceMappingURL=style.css.map */
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <!----- Meta tag starts here ----->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!----- Meta tag ends here ----->
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        
+            <div class="login-page">
+                <div class="heroChat-Logo"><img src="images/heorchatlogo.png"></div>
+				<div class="signIn-set">
+				<div class="signin">Sign In</div>
+				<div class="grayline">
+			<div class="signIn-photo"><img src="images/userInfoPhoto.jpg"></div>
+			</div>
+			<form>
+			<input type="text" name="username">
+			<input type="password" name="username">
+			<input type="submit" name="username" value="Login">
+			</form>
+			<div class="incorrectUsername">Invalid Username / Password</div>
+			</div>
+            </div>
+        
+    </body>
+</html>
